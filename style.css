@@ -30,7 +30,7 @@ button:active{
 }
 
 #myProgress {
-  width: 990px;
+  width: 100%;
   background-color: #aaaaaa;
   margin: 0px 0px 0px 0px;
   padding: 5px;
