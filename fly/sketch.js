@@ -23,7 +23,7 @@ function frame() {
 }
 
 function setup() {
-    createCanvas(100, 100).parent("flex");;
+    createCanvas(document.getElementById("flex").clientWidth, document.getElementById("flex").clientHeight-40).parent("flex");;
     
     count = 0
     generation = 0

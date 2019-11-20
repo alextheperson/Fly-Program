@@ -1,7 +1,9 @@
 body{
   background-image: url(diamondPlateReapeatable.jpeg);
 }
-
+* {
+  box-sizing: border-box;
+}
 div {
   overflow: hidden;
   background: #aaaaaa;
@@ -42,4 +44,10 @@ button:active{
 }
 panel {
   display: flex;
+  width: 95%;
+  margin: 0px auto;
+}
+#flex, canvas {
+  padding: 0px !important;
+  margin: 0px !important;
 }
