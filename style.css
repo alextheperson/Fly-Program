@@ -1,0 +1,49 @@
+body{
+  background-image: url(diamondPlateReapeatable.jpeg);
+}
+
+div {
+  overflow: hidden;
+  background: #aaaaaa;
+  padding: 5px;
+}
+input {
+  margin: 5px 5px 5px 5px;
+  background-image: linear-gradient(#aaaaaa, #d0d0d0);
+  border-radius: 3px;
+}
+right{
+  float: right;
+  clear: both;
+}
+
+button{
+  background-image: linear-gradient(#aaaaaa, #d0d0d0);
+  border-radius: 5px;
+}
+
+button:active{
+  background: #aaaaaa;
+  border-radius: 5px;
+}
+
+#myProgress {
+  width: 990px;
+  background-color: #aaaaaa;
+  margin: 0px 0px 0px 0px;
+  padding: 5px;
+  height: 40px;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #aa0000;
+}
+panel {
+  display: flex;
+}
+#defaultCanvas0 {
+  width: 100% !important;
+  height: 100% !important;
+}
