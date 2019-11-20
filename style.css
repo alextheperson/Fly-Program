@@ -43,7 +43,3 @@ button:active{
 panel {
   display: flex;
 }
-#defaultCanvas0 {
-  width: 100% !important;
-  height: 100% !important;
-}
