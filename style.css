@@ -32,9 +32,20 @@ button:active{
 #myProgress {
   width: 100%;
   background-color: #aaaaaa;
-  margin: 0px 0px 0px 0px;
+  margin: 0px;
   padding: 5px;
   height: 40px;
+  box-shadow: 0px 5px 8px #00000080;
+}
+
+#myProgress::after {
+  width: 1px;
+  background-color: #aa0000;
+  margin: auto;
+  height: 30px;
+  content: '';
+  display: block;
+  margin-top: -30px;
 }
 
 #myBar {

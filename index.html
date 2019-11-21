@@ -10,7 +10,7 @@
   <body>
     <panel>
       <right style="width:25%;">
-        <div style="border-right:1px solid black;border-bottom:1px solid black">
+        <div style="margin-right:2px;margin-bottom:2px;">
           <p>
             Reward:<input type="number" id="reward" value="500" onkeyup="printResult()"><br>
             Punishment:<input type="number" id="punishment" value="3" onkeyup="printResult()"><br>
@@ -62,9 +62,10 @@
           <button type="submit" id="run" onclick="setup()">Run Experiment</button>
           <button type="submit" id="re" onclick="re()">Reset Controls</button>
           <button type="submit" id="info" onclick="info()">?</button>
-          <button onclick="window.location.href = 'https://github.com/alextheperson/Fly-Program';">Code</a>
+          <button onclick="window.location.href = 'https://github.com/alextheperson/Fly-Program';">Code</button>
+          <button onclick="window.location.href = 'https://repl.it/@alextheperson/Fly-Program';">Repl.it</button>
         </div>
-        <div style="border-right:1px solid black;">
+        <div style="margin-right:2px;">
           <p id="stats">
             Reward: 500<br>
             Punishment: 3<br>
@@ -90,7 +91,7 @@
         <script src="fly/Population.js" type="text/javascript"></script>
         <script src="fly/Wall.js" type="text/javascript"></script>
         <script src="fly/sketch.js" type="text/javascript"></script>
-        <div id="myProgress" style="border-bottom:1px solid black;">
+        <div id="myProgress" style="margin-bottom:2px;">
           <div id="myBar"></div>
         </div>
       </div>

@@ -13,13 +13,10 @@ let population
 let elemWidth = 0
 
 function frame() {
-  if (elemWidth >= 99) {
-    elemWidth += 1;
-  } else {
-    elemWidth=map(count, 1, LIFE_SPAN, 1, 97)
-    elemWidth++; 
-    document.getElementById("myBar").style.width = elemWidth + '%'; 
-  }
+  elemWidth=map(count, 0, LIFE_SPAN, 0, document.getElementById('myProgress').clientWidth-10)
+  elemWidth++; 
+  document.getElementById("myBar").style.width = elemWidth + 'px';
+  console.log(elemWidth)
 }
 
 function setup() {
