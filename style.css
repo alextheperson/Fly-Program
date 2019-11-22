@@ -19,7 +19,12 @@ right{
   float: right;
   clear: both;
 }
-
+p {
+  margin-top: 0px;
+}
+p:last-child {
+  margin-bottom: 0px;
+}
 button{
   background-image: linear-gradient(#aaaaaa, #d0d0d0);
   border-radius: 5px;
@@ -34,24 +39,33 @@ button:active{
   width: 100%;
   background-color: #aaaaaa;
   margin: 0px;
-  padding: 5px;
-  height: 40px;
+  padding: 0px 5px;
+  height: 80px;
 }
 
 #myProgress::after {
   width: 1px;
-  background-color: #aa0000;
+  background-color: black;
   margin: auto;
-  height: 30px;
+  height: 80px;
   content: '';
   display: block;
-  margin-top: -30px;
+  margin-top: -80px;
 }
 
 #myBar {
   width: 1%;
   height: 30px;
   background-color: #aa0000;
+  color: white;
+  overflow: hidden;
+}
+#myBar2 {
+  width: 0%;
+  height: 30px;
+  background-color: #0000aa;
+  color: white;
+  overflow: hidden;
 }
 panel {
   display: flex;

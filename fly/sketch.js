@@ -13,13 +13,14 @@ let population
 let elemWidth = 0
 
 function frame() {
-  elemWidth=map(count, 0, LIFE_SPAN, 0, document.getElementById('myProgress').clientWidth-10)
+  elemWidth=map(count, 0, LIFE_SPAN, 0, 100)
   elemWidth++; 
-  document.getElementById("myBar").style.width = elemWidth + 'px';
+  document.getElementById("myBar").style.width = elemWidth + '%';
+  document.getElementById("myBar").innerHTML = elemWidth.toFixed(1) + '%';
 }
 
 function setup() {
-    createCanvas(document.getElementById("flex").clientWidth, document.getElementById("flex").clientHeight-40).parent("flex");;
+    createCanvas(document.getElementById("flex").clientWidth, document.getElementById("flex").clientHeight-80).parent("flex");;
     
     count = 0
     generation = 0
@@ -43,6 +44,8 @@ function draw() {
     background(170, 170, 170);
     
     frame();
+  	document.getElementById('myBar2').style.width = map(averageFit, 0, 700, 0, 100) + '%';
+    document.getElementById('myBar2').innerHTML = map(averageFit, 0, 700, 0, 100).toFixed(1) + '%';
 
     document.getElementById("currentStats").innerHTML = "Generation: " + str(generation) + "<br>Average Fitness: " + str(averageFit) + "<br>Success Rate: " + str(sucsessRate) + "/" + POPULATION + "<br>Total Successes " + str(totalSucsessRate) + "<br>Age: " + str(count);
     
