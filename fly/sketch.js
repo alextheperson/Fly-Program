@@ -47,7 +47,6 @@ function draw() {
     document.getElementById("currentStats").innerHTML = "Generation: " + str(generation) + "<br>Average Fitness: " + str(averageFit) + "<br>Success Rate: " + str(sucsessRate) + "/" + POPULATION + "<br>Total Successes " + str(totalSucsessRate) + "<br>Age: " + str(count);
     
     sucsessRate = population.sucsessRate;
-    totalSucsessRate = population.sucsessRate + totalSucsessRate;
 
     population.run(count)
     let numHit = 0;

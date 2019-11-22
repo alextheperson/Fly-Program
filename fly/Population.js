@@ -4,8 +4,7 @@ class Population {
         this.pop_size = pop_size;
         this.reward = reward;
         this.punishment = punishment;
-        this.sucsessRate = 0
-        this.totSucsessRate = 0
+        this.sucsessRate = 0;
 
         this.food = new Food(width/2, 50, 30);
         this.wall1 = new Wall(width/2, height - height / 3, 300, 30);
@@ -14,6 +13,7 @@ class Population {
 
         this.flies = [];
         this.pool = [];
+        this.goodFlies = [];
 
         if(new_pop === undefined){
             for(let i = 0; i < pop_size; i++){
@@ -59,6 +59,7 @@ class Population {
     }
 
     generateNewPop(mutationRate){
+		totalSucsessRate += this.sucsessRate;
         let NewFlies = [];
         for(let i = 0; i < this.pop_size; i++){
            
@@ -87,8 +88,11 @@ class Population {
             this.flies[i].update(count, this.wall1, this.wall2, this.wall3);
             this.flies[i].show();
             if(this.flies[i].hitFood){
-                this.sucsessRate +=1
-                console.log("fly number " + i + " hit food!")
+				if (this.goodFlies.includes(i)){
+				}else{
+					this.sucsessRate +=1;
+					this.goodFlies.push(i);
+				}
             }
         }
     }
