@@ -88,7 +88,7 @@ class Population {
             this.flies[i].show();
             if(this.flies[i].hitFood){
                 this.sucsessRate +=1
-                this.totSucsessRate +=1
+                console.log("fly number " + i + " hit food!")
             }
         }
     }

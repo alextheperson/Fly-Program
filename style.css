@@ -3,6 +3,7 @@ body{
 }
 * {
   box-sizing: border-box;
+  outline: none;
 }
 div {
   overflow: hidden;
@@ -35,7 +36,6 @@ button:active{
   margin: 0px;
   padding: 5px;
   height: 40px;
-  box-shadow: 0px 5px 8px #00000080;
 }
 
 #myProgress::after {
@@ -59,6 +59,7 @@ panel {
   margin: 0px auto;
 }
 #flex, canvas {
+  display: block;
   padding: 0px !important;
   margin: 0px !important;
 }

@@ -16,11 +16,10 @@ function frame() {
   elemWidth=map(count, 0, LIFE_SPAN, 0, document.getElementById('myProgress').clientWidth-10)
   elemWidth++; 
   document.getElementById("myBar").style.width = elemWidth + 'px';
-  console.log(elemWidth)
 }
 
 function setup() {
-    createCanvas(document.getElementById("flex").clientWidth, document.getElementById("flex").clientHeight-45).parent("flex");;
+    createCanvas(document.getElementById("flex").clientWidth, document.getElementById("flex").clientHeight-40).parent("flex");;
     
     count = 0
     generation = 0
@@ -48,7 +47,7 @@ function draw() {
     document.getElementById("currentStats").innerHTML = "Generation: " + str(generation) + "<br>Average Fitness: " + str(averageFit) + "<br>Success Rate: " + str(sucsessRate) + "/" + POPULATION + "<br>Total Successes " + str(totalSucsessRate) + "<br>Age: " + str(count);
     
     sucsessRate = population.sucsessRate;
-    totalSucsessRate = population.totSucsessRate
+    totalSucsessRate = population.sucsessRate + totalSucsessRate;
 
     population.run(count)
     let numHit = 0;
@@ -71,7 +70,7 @@ function draw() {
         let newFlies = population.generateNewPop(MUTATION)
 
         population = new Population(LIFE_SPAN, POPULATION, REWARD_MULT, PUNISH_DIV, newFlies)
-        document.getElementById("myBar").style.width = 97 + '%';
+        document.getElementById("myBar").style.width = document.getElementById('myProgress').clientWidth-10 + 'px';
         count = 0;
         generation++
         population.sucsessRate = 0;
