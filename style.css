@@ -46,26 +46,25 @@ button:active{
 #myProgress::after {
   width: 1px;
   background-color: black;
-  margin: auto;
+  margin: 50%;
   height: 80px;
   content: '';
-  display: block;
+  display: inline-block;
   margin-top: -80px;
+  position: relative;
 }
-
-#myBar {
-  width: 1%;
-  height: 30px;
-  background-color: #aa0000;
+#myBar, #myBar2 {
   color: white;
   overflow: hidden;
-}
-#myBar2 {
+  border-right: 3px solid black;
   width: 0%;
   height: 30px;
+}
+#myBar {
+  background-color: #aa0000;
+}
+#myBar2 {
   background-color: #0000aa;
-  color: white;
-  overflow: hidden;
 }
 panel {
   display: flex;

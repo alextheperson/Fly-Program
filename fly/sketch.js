@@ -44,8 +44,8 @@ function draw() {
     background(170, 170, 170);
     
     frame();
-  	document.getElementById('myBar2').style.width = map(averageFit, 0, 700, 0, 100) + '%';
-    document.getElementById('myBar2').innerHTML = map(averageFit, 0, 700, 0, 100).toFixed(1) + '%';
+  	document.getElementById('myBar2').style.width = map(averageFit, 50, 2000, 0, 100) + '%';
+    document.getElementById('myBar2').innerHTML = map(averageFit, 50, 2000, 0, 100).toFixed(1) + '%';
 
     document.getElementById("currentStats").innerHTML = "Generation: " + str(generation) + "<br>Average Fitness: " + str(averageFit) + "<br>Success Rate: " + str(sucsessRate) + "/" + POPULATION + "<br>Total Successes " + str(totalSucsessRate) + "<br>Age: " + str(count);
     
