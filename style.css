@@ -44,7 +44,7 @@ button:active{
 }
 
 #myProgress::after {
-  width: 1px;
+  width: 3px;
   background-color: black;
   margin: 50%;
   height: 80px;
